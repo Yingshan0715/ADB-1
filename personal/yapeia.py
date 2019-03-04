@@ -1,4 +1,4 @@
-from ..autoclass2 import AutoDatabank2
+from ..autoclass import AutoDatabank
 from ..actionfunc import timedelta, parse, somedays
 from ..actionfunc import swtime, checktime, two_check_time
 from ..actionfunc import t365, t180, tnow
@@ -7,7 +7,7 @@ import json
 
 modulepath = adbpath.__file__[:-10] + 'setini/' + 'eightxx'
 
-dglc = AutoDatabank2(zhanghao=2, tmall_global=False, purchase_Behaviour='dp')
+dglc = AutoDatabank(zhanghao=2, tmall_global=False, purchase_Behaviour='dp')
 dglc.yybp_order = 0
 dglc.ppld_order = 0
 # set dglcR
@@ -19,7 +19,7 @@ def set_dglc(izhang_hao, tmall_global, p_type, yybp, ppld, ppzq, mxdp, zszw, bra
     '''tmall_global：如果有出现 tmall_global，必填True 默认False
        p_typle：选择 店铺的行为，‘gj’为国际店行为，‘dp’为官方直营旗舰店行为'''
     global dglc
-    dglc = AutoDatabank2(zhanghao=izhang_hao,
+    dglc = AutoDatabank(zhanghao=izhang_hao,
                          tmall_global=tmall_global, purchase_Behaviour=p_type)
     dglc.yybp_order = yybp
     dglc.ppld_order = ppld

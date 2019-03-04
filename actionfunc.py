@@ -8,8 +8,8 @@ from .positiondf import positiondict
 pyautogui.FAILSAFE = 1  # 1代表True，表示可以使用左上角打断
 pyautogui.PAUSE = 0.65  # 标准库的截断时间
 
-DEFAULT_DURA = 0.11
-DEFAFLLTPAUSE = 0.13
+DEFAULT_DURA = 0.15
+DEFAFLLTPAUSE = 0.2
 
 
 def set_pause(pause=0.101, dura=0.15):
@@ -25,7 +25,7 @@ def set_pause(pause=0.101, dura=0.15):
 def click2(xy):
     '''xy为长度为2的元组，代表一个屏幕坐标'''
     moveTo(xy, duration=DEFAULT_DURA,
-           tween=easeOutQuad, pause=0)
+           tween=pyautogui.easeOutQuad, pause=0)
     click(pause=DEFAFLLTPAUSE)
 
 
@@ -36,7 +36,7 @@ def dragg(location):
     moveTo(positiondict['dragposition'][0] + randint(0, 300),
            positiondict['dragposition'][1],
            duration=0.5,
-           tween=easeOutQuad)
+           tween=pyautogui.easeOutQuad)
     click()
 
 

@@ -183,7 +183,7 @@ def qudaofenbu_aipl(ts, te, aipl_name, nametyple, namess):
     dglc.sp('%s%s-xX-直播' % (namess, aipl_name2))
 
     dglc.cp()
-    dglc.wt_gg(2, ts, te, 3)
+    dglc.wt_gg(1, ts, te, 3)
     dglc.wt(1, ts, te, 3)
     dglc.wt(2, ts, te, 3)
     dglc.wt(3, ts, te, 3)
@@ -313,7 +313,7 @@ def qudaofenbu_aipl(ts, te, aipl_name, nametyple, namess):
     else:
         dglc.dp(123, ts, te, 1)
         dglc.dpall(123, ts, te, 3)
-    dglc.sp('%s%s-交际-天猫其他' % (namess, aipl_name2))
+    dglc.sp('%s%s-交集-天猫其他' % (namess, aipl_name2))
 
     dglc.cp()
     if nametyple == 34:
@@ -436,7 +436,7 @@ def qudaofenbu_huizong(ts, te, namess):
     dglc.sp('%s-汇总-直播' % (namess))
 
     dglc.cp()
-    dglc.wt_gg(2, ts, te, 2)
+    dglc.wt_gg(1, ts, te, 2)
     dglc.wt(1, ts, te, 2)
     dglc.wt(2, ts, te, 2)
     dglc.wt(3, ts, te, 2)
@@ -507,64 +507,71 @@ def qudaofenbu_huizong(ts, te, namess):
     dglc.sp('%s-汇总-智慧商圈' % (namess))
 
     dglc.cp()
-    if nametyple == 34:
-        dglc.dptmgj(45, ts, te, 2)
-    else:
-        dglc.dptmgj(123, ts, te, 2)
-    dglc.sp('%s-汇总-天猫国际' % (namess))
+    dglc.dptmgj(45, ts, te, 2)
+    dglc.sp('%s-汇总45-天猫国际' % (namess))
+    
+    dglc.cp()
+    dglc.dptmgj(123, ts, te, 2)
+    dglc.sp('%s-汇总123-天猫国际' % (namess))
 
     dglc.cp()
-    if nametyple == 34:
-        dglc.dptmgjzy(45, ts, te, 2)
-    else:
-        dglc.dptmgjzy(123, ts, te, 2)
-    dglc.sp('%s-汇总-国际直营' % (namess))
+    dglc.dptmgjzy(45, ts, te, 2)
+    dglc.sp('%s-汇总45-国际直营' % (namess))
+    
+    dglc.cp()
+    dglc.dptmgjzy(123, ts, te, 2)
+    dglc.sp('%s-汇总123-国际直营' % (namess))
 
     dglc.cp()
-    if nametyple == 34:
-        dglc.dptmcs(45, ts, te, 2)
-    else:
-        dglc.dptmcs(123, ts, te, 2)
-    dglc.sp('%s-汇总-天猫超市' % (namess))
+    dglc.dptmcs(45, ts, te, 2)
+    dglc.sp('%s-汇总45-天猫超市' % (namess))
 
     dglc.cp()
-    if nametyple == 34:
-        dglc.dp(45, ts, te, 2)
-    else:
-        dglc.dp(123, ts, te, 2)
-    dglc.sp('%s-汇总-天猫旗舰店' % (namess))
+    dglc.dptmcs(123, ts, te, 2)
+    dglc.sp('%s-汇总123-天猫超市' % (namess))
 
     dglc.cp()
-    if nametyple == 34:
-        dglc.dpall(45, ts, te, 2)
-    else:
-        dglc.dpall(123, ts, te, 2)
-    dglc.sp('%s-汇总-天猫全部' % (namess))
+    dglc.dp(45, ts, te, 2)
+    dglc.sp('%s-汇总45-天猫旗舰店' % (namess))
+    
+    dglc.cp()
+    dglc.dp(123, ts, te, 2)
+    dglc.sp('%s-汇总123-天猫旗舰店' % (namess))
 
     dglc.cp()
-    if nametyple == 34:
-        dglc.dp(45, ts, te, 1)
-        dglc.dpall(45, ts, te, 2)
-    else:
-        dglc.dp(123, ts, te, 1)
-        dglc.dpall(123, ts, te, 2)
-    dglc.sp('%s%s-交际-天猫其他' % (namess))
+    dglc.dpall(45, ts, te, 2)
+    dglc.sp('%s-汇总45-天猫全部' % (namess))
+    
+    dglc.cp()
+    dglc.dpall(123, ts, te, 2)
+    dglc.sp('%s-汇总123-天猫全部' % (namess))
 
     dglc.cp()
-    if nametyple == 34:
-        dglc.dpqqg(45, ts, te, 2)
-    else:
-        dglc.dpqqg(123, ts, te, 2)
-    dglc.sp('%s-汇总-全球购' % (namess))
+    dglc.dp(45, ts, te, 1)
+    dglc.dpall(45, ts, te, 3)
+    dglc.sp('%s-汇总45-天猫其他' % (namess))
+    
+    dglc.cp()
+    dglc.dp(123, ts, te, 1)
+    dglc.dpall(123, ts, te, 3)
+    dglc.sp('%s-汇总123-天猫其他' % (namess))
 
     dglc.cp()
-    if nametyple == 34:
-        dglc.dptbjs(45, ts, te, 2)
-    else:
-        dglc.dptbjs(123, ts, te, 2)
-    dglc.sp('%s-汇总-淘宝集市' % (namess))
+    dglc.dpqqg(45, ts, te, 2)
+    dglc.sp('%s-汇总45-全球购' % (namess))
+    
+    dglc.cp()
+    dglc.dpqqg(123, ts, te, 2)
+    dglc.sp('%s-汇总123-全球购' % (namess))
+
+    dglc.cp()
+    dglc.dptbjs(45, ts, te, 2)
+    dglc.sp('%s-汇总45-淘宝集市' % (namess))
+    
+    dglc.cp()
+    dglc.dptbjs(123, ts, te, 2)
+    dglc.sp('%s-汇总123-淘宝集市' % (namess))
 
     dglc.cp()
     dglc.hy(1, ts, te, 2)
-    dglc.zdy('%s%s' % (namess, aipl_name), 3)
     dglc.sp('%s-汇总-新增会员' % (namess))

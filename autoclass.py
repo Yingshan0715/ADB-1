@@ -137,7 +137,7 @@ class AutoDatabank(BaseAuto):
 
     def mrhd(self, action, start_date, end_date, jbc='j'):
         '''内容渠道---每日好店'''
-        self._neirongyunying(9, action, start_date, end_date, jbc)
+        self._neirongyunying(10, action, start_date, end_date, jbc)
     #############################☆######################################
     #############################☆######################################
 

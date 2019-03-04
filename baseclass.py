@@ -73,11 +73,11 @@ class BaseAuto():
     def _createpeople(self):
         click2(positiondict['diyichuangkou'])
         pyautogui.keyDown('f5')
-        time.sleep(1)
+        time.sleep(2)
         click2(positiondict['zidingyirenqun'])
         time.sleep(1)
         click2(positiondict['xinjianrenqun'])
-        time.sleep(2)
+        time.sleep(4)
         click2(positiondict['diyichuangkouguanbi'])
         self.drgcount = 0
     cp = _createpeople
@@ -261,26 +261,31 @@ class BaseAuto():
         assert two_check_time(start_date, end_date)
         self._drag_to_workspace_and_jbc(wz, nm, nn, jbc)
         #-----------------------------------------------------------------------------------#
-        aclick_after_clickdown(-1, fenlei)
+
         if fenlei == 2:
+            aclick_after_clickdown(-1, fenlei)
             aclick_after_clickdown(1, 1)
             aclick_after_clickdown(2, 1)
             aclick_after_clickdown(3, action)
             tt = 5
         elif fenlei == 7:
+            aclick_after_clickdown(-1, fenlei)
             aclick_after_clickdown(1, action)
             aclick_after_clickdown(2, 1)
             aclick_after_clickdown(3, 1)
             tt = 5
         elif fenlei in [3, 4, 5, 6]:
+            aclick_after_clickdown(-1, fenlei)
             aclick_after_clickdown(1, action)
         elif fenlei == 8:
+            aclick_after_clickdown(-1, fenlei)
             aclick_after_clickdown(1, 1)
             aclick_after_clickdown(2, action)
             aclick_after_clickdown(3, 1)
             aclick_after_clickdown(4, 1)
             tt = 6
-        elif fenlei == 9:
+        elif fenlei == 10:
+            aclick_after_clickdown(-1, 8, Downstyle=True)
             aclick_after_clickdown(1, action)
             aclick_after_clickdown(2, self.zhanghao)
         #-----------------------------------------------------------------------------------#

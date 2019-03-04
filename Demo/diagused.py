@@ -76,12 +76,6 @@ def diaoyong_tracking(t2bef, t2end, dy_name, sc_name, with_people, Xmodel=3, LIN
         else:
             leixinname = with_people[0]
             dglc.zdy(with_people[1])
-    
-    if LING:
-        cp3()
-        dglc.zdy('%sv0】零人群' % dy_name, Xmodel)
-        dglc.sp('%s-%s零人群%s%s' %
-            (dy_name, sc_name, xname, leixinname))  # A
 
     cp3()
     dglc.zdy('%sv3】非店之A' % dy_name, Xmodel)
