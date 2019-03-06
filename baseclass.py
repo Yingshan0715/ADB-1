@@ -82,21 +82,25 @@ class BaseAuto():
         self.drgcount = 0
     cp = _createpeople
 
-    def _savepeople(self, people_name, yanzheng=False):
+    def _savepeople(self, people_name, yanzheng=True):
         click2(positiondict['renqunmingcheng'])
         ppaste(people_name)
 
-        if not self.smallscreen:
-            yanzheng = True
         if yanzheng:
-            pyautogui.hotkey('ctrl', 'shift', 'i')
-            pyautogui.moveTo(positiondict['countnumber'],
-                             duration=0.25, pause=0.25)
-            pyautogui.doubleClick()
-            pyautogui.hotkey('ctrl', 'c')
+            if self.smallscreen:
+                pyautogui.moveTo(
+                    positiondict['countnumber'], duration=0.25, pause=0.25)
+                pyautogui.doubleClick()
+                pyautogui.hotkey('ctrl', 'c')
+            else:
+                pyautogui.hotkey('ctrl', 'shift', 'i')
+                pyautogui.moveTo(
+                    positiondict['countnumber'], duration=0.25, pause=0.25)
+                pyautogui.doubleClick()
+                pyautogui.hotkey('ctrl', 'c')
+                pyautogui.hotkey('ctrl', 'shift', 'i')
 
             assert int(pyperclip.paste()) == self.drgcount  # 网络不稳定
-            pyautogui.hotkey('ctrl', 'shift', 'i')
 
         click2(positiondict['baocun'])
         click2(positiondict['baocunqueding'])

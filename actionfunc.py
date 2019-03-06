@@ -8,7 +8,7 @@ from .positiondf import positiondict
 pyautogui.FAILSAFE = 1  # 1代表True，表示可以使用左上角打断
 pyautogui.PAUSE = 0.65  # 标准库的截断时间
 
-DEFAULT_DURA = 0.15
+DEFAULT_DURA = 0.25
 DEFAFLLTPAUSE = 0.25
 
 
@@ -70,6 +70,11 @@ def swtime(timeinput, StrType=True):
 
 def somedays(dtinput, theday=90):
     return swtime(swtime(dtinput, False) - timedelta(theday))
+
+
+def namesstt(adatetime):
+    adatetime = swtime(adatetime, False)
+    return '%02d%02d' % (adatetime.month, adatetime.day)
 
 
 tnow = swtime(datetime.now() - timedelta(1), False)

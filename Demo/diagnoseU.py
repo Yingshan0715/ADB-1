@@ -1,5 +1,5 @@
 from ..autoclass import AutoDatabank
-from ..actionfunc import timedelta, parse, somedays
+from ..actionfunc import timedelta, parse, somedays, namesstt
 from ..actionfunc import swtime, checktime, two_check_time
 from ..actionfunc import t365, t180, tnow
 from .. import adbpath
@@ -37,10 +37,8 @@ def set_dglc(izhang_hao, tmall_global, p_type, yybp, ppld, ppzq, mxdp, zszw, bra
 
 
 def fuzhu_of_depth(tAs, tIs, tHs,
-                   t2bef, t2end,
-                   kwords, pph=True,
-                   namess='def'):
-    assert pph in [True, False]
+                   t2bef,
+                   kwords, pph=True):
 
     a1 = tAs
     a2 = swtime(t2bef, False) - timedelta(1)
@@ -48,6 +46,8 @@ def fuzhu_of_depth(tAs, tIs, tHs,
     i2 = swtime(t2bef, False) - timedelta(1)
     h1 = tHs
     h2 = swtime(t2bef, False) - timedelta(1)
+
+    namess = namesstt(a2)
 
     dglc.cp()
     dglc.super_ss(kwords, a1, a2, jbc='bb-BitCoin')
@@ -117,8 +117,9 @@ def fuzhu_of_depth(tAs, tIs, tHs,
 #★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★#
 
 
-def depths_of_aipl(tAs, tIs, t2bef, t2end, namess):
+def depths_of_aipl(tAs, tIs, t2bef):
     tpend = swtime(t2bef, 0) - timedelta(1)
+    namess = namesstt(tpend)
 
     #-------【AA】---------------★★★★★★★★★★#
     dglc.cp()
@@ -171,7 +172,7 @@ def depths_of_aipl(tAs, tIs, t2bef, t2end, namess):
     dglc.sp('%sv8】非店之I' % namess)
 
     # dglc.cp()
-    #dglc.zdy('%s【辅】超级用户'%namess)
+    # dglc.zdy('%s【辅】超级用户'%namess)
     #dglc.qll(34, tIs, tpend, 1)
     # dglc.qll(2, tIs, tpend, 3)  # 连接I差PL
     #dglc.zdy('%s【辅】旗舰店I行为' % namess, 1)
@@ -194,7 +195,7 @@ def depths_of_aipl(tAs, tIs, t2bef, t2end, namess):
     dglc.sp('%sv11】超I浅I' % namess)
 
     # dglc.cp()
-    #dglc.zdy('%s【辅】超级用户'%namess)
+    # dglc.zdy('%s【辅】超级用户'%namess)
     #dglc.qll(34, tIs, tpend, 3)
     # dglc.qll(2, tIs, tpend, 3)  # 连接I差PL
     #dglc.zdy('%s【辅】旗舰店I行为' % namess, 1)

@@ -3,7 +3,7 @@ from .actionfunc import set_pause
 from .actionfunc import click2, ppaste
 from .actionfunc import position as dw
 # Reaction of pyautogui action
-from .actionfunc import somedays
+from .actionfunc import somedays, namesstt
 from .actionfunc import t365, t180, tnow
 from .actionfunc import swtime, timedelta, checktime, two_check_time
 # Checking function
@@ -13,7 +13,7 @@ from .autoclass import AutoDatabank
 # Auto Class
 
 from .adblog import logdf
-#Log system
+# Log system
 
 aalc = AutoDatabank(2)
 

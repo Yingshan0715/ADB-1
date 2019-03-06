@@ -1,5 +1,5 @@
 from ..autoclass import AutoDatabank
-from ..actionfunc import timedelta, parse, somedays
+from ..actionfunc import timedelta, parse, somedays, namesstt
 from ..actionfunc import swtime, checktime, two_check_time
 from ..actionfunc import t365, t180, tnow
 from .. import adbpath
@@ -27,9 +27,10 @@ def reloaddglc():
 #★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★#
 
 
-def diaoyong_jindian(t2bef, t2end, namess='def'):
-    tpend = swtime(t2bef, 0) - timedelta(1)
+def diaoyong_jindian(t2bef, t2end):
     reloaddglc()
+    namess = namesstt(t2bef) + '-' + namesstt(t2end)
+    
     if two_check_time(t2bef, t2end):
         dglc.cp()
         dglc.dp(12345, t2bef, t2end, 2)
@@ -37,17 +38,17 @@ def diaoyong_jindian(t2bef, t2end, namess='def'):
         dglc.tm(3, t2bef, t2end, 2)
         dglc.sp('%s【辅】进店ZDY' % namess)
 
-        dglc.cp()
-        dglc.qll(1234, t180, tpend)
-        dglc.qll(1234, t2bef, t2end, 3)  # 连接A差IPL
-        dglc.sp('%sv0】零人群' % namess)
 
-
-def diaoyong_tracking(t2bef, t2end, dy_name, sc_name, with_people, Xmodel=3, LING=False):
+def diaoyong_tracking(t2bef, t2end, with_people, Xmodel=3):
     reloaddglc()
     tpend = swtime(t2bef, False) - timedelta(1)
+    dy_name = namesstt(tpend)
+    sc_name = namesstt(t2end)
+
     xname = 'xX' if Xmodel == 3 else '-'
     leixinname = ''
+
+    
 
     def cp3():
         nonlocal leixinname
@@ -57,7 +58,8 @@ def diaoyong_tracking(t2bef, t2end, dy_name, sc_name, with_people, Xmodel=3, LIN
             dglc.dp(5, t2bef, t2end)
         elif with_people == 'jd':
             leixinname = '进店'
-            dglc.zdy('%s【辅】进店ZDY' % sc_name)
+            dglc.zdy('%s%s%s【辅】进店ZDY' %
+                     (namesstt(t2bef), '-', namesstt(t2end)))
         elif with_people == 'bg':
             leixinname = '曝光'
             dglc.zszw([1, 99], t2bef, t2end, action=1)
