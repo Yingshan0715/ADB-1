@@ -31,7 +31,7 @@ def set_dglc(izhang_hao, tmall_global, p_type, yybp, ppld, ppzq, mxdp, zszw, bra
 #★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★#
 #★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★#
 
-# tnow
+tnow = swtime('2019-2-28',False)
 
 namess = '%02d%02d' % (tnow.month, tnow.day)
 t30 = somedays(swtime(tnow + timedelta(1)), 30)
@@ -166,7 +166,9 @@ def laoke_run_maochao():
             dglc.klngm(4, [vmin, vmax], t365, tnow, 3)
             if ts:
                 dglc.dpall(5, ts, tnow, 1)
-            dglc.dpall(5, te, tnow, 3)
+                dglc.dpall(5, te, tnow, 3)
+            else:
+                dglc.dpall(5, te, tnow, 1)
             dglc.sp('%s-%s-%s-%s' %
                     (namess, x.split('-')[1], y.split('-')[1], '猫超'))  # change behind
 
@@ -192,7 +194,9 @@ def laoke_run_qijiandian():
             dglc.klngm(5, [vmin, vmax], t365, tnow, 2)
             if ts:
                 dglc.dpall(5, ts, tnow, 1)
-            dglc.dpall(5, te, tnow, 3)
+                dglc.dpall(5, te, tnow, 3)
+            else:
+                dglc.dpall(5, te, tnow, 1)
             dglc.sp('%s-%s-%s-%s' %
                     (namess, x.split('-')[1], y.split('-')[1], '旗舰'))
 

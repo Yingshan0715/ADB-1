@@ -17,7 +17,10 @@ def adbloginfo(brand, sptime, personname, dragcount):
 
 
 def logdf():
-    df = pd.read_csv(modulepath + 'log.txt', encoding='utf-8')
-    df.columns = ['品牌名称', '生成时间', '人群包名称', '逻辑单元数']
-    df['生成时间'] = pd.to_datetime(df['生成时间'])
+    df = pd.DataFrame()
+    for i in os.listdir(modulepath):
+        _df = pd.read_csv(modulepath + i, encoding='utf-8')
+        _df.columns = ['品牌名称', '生成时间', '人群包名称', '逻辑单元数']
+        _df['生成时间'] = pd.to_datetime(_df['生成时间'])
+        df = pd.concat([df, _df])
     return df.drop_duplicates()

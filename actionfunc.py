@@ -9,7 +9,7 @@ pyautogui.FAILSAFE = 1  # 1代表True，表示可以使用左上角打断
 pyautogui.PAUSE = 0.65  # 标准库的截断时间
 
 DEFAULT_DURA = 0.15
-DEFAFLLTPAUSE = 0.2
+DEFAFLLTPAUSE = 0.25
 
 
 def set_pause(pause=0.101, dura=0.15):
