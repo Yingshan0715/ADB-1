@@ -36,18 +36,12 @@ def set_dglc(izhang_hao, tmall_global, p_type, yybp, ppld, ppzq, mxdp, zszw, bra
 #★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★#
 
 
-def fuzhu_of_depth(tAs, tIs, tHs,
-                   t2bef,
-                   kwords, pph=True):
+def fuzhu_of_depth(tAs, tIs, tHs, tpend, kwords, pph=True):
 
-    a1 = tAs
-    a2 = swtime(t2bef, False) - timedelta(1)
-    i1 = tIs
-    i2 = swtime(t2bef, False) - timedelta(1)
-    h1 = tHs
-    h2 = swtime(t2bef, False) - timedelta(1)
+    a1, i1, h1 = tAs, tIs, tHs
+    a2, i2, h2 = tpend, tpend, tpend
 
-    namess = namesstt(a2)
+    namess = namesstt(tpend)
 
     dglc.cp()
     dglc.super_ss(kwords, a1, a2, jbc='bb-BitCoin')
@@ -117,21 +111,20 @@ def fuzhu_of_depth(tAs, tIs, tHs,
 #★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★#
 
 
-def depths_of_aipl(tAs, tIs, t2bef):
-    tpend = swtime(t2bef, 0) - timedelta(1)
+def depths_of_aipl(tAs, tIs, tpend):
     namess = namesstt(tpend)
 
     #-------【AA】---------------★★★★★★★★★★#
-    dglc.cp()
-    dglc.qll(234, t180, tpend)
-    dglc.qll(1, tAs, tpend, 3)  # 连接A差IPL
-    dglc.sp('%sv1】全渠道A' % namess)
+    # dglc.cp()
+    # dglc.qll(234, t180, tpend)
+    # dglc.qll(1, tAs, tpend, 3)  # 连接A差IPL
+    # dglc.sp('%sv1】全渠道A' % namess)
 
     # dglc.cp()
-    #dglc.qll(234, t180, tpend)
+    # glc.qll(234, t180, tpend)
     # dglc.qll(1, tAs, tpend, 3)  # 连接A差IPL
-    #dglc.zdy('%s【辅】旗舰店A行为' % namess, 1)
-    #dglc.sp('%sv2】旗店之A' % namess)
+    # dglc.zdy('%s【辅】旗舰店A行为' % namess, 1)
+    # dglc.sp('%sv2】旗店之A' % namess)
 
     dglc.cp()
     dglc.zdy('%s【辅】旗舰店A行为' % namess)
@@ -154,16 +147,16 @@ def depths_of_aipl(tAs, tIs, t2bef):
     dglc.zdy('%s【辅】旗舰店A行为' % namess, 1)
     dglc.sp('%sv5】旗店浅A' % namess)
     #-------【II】---------------★★★★★★★★★★#
-    dglc.cp()
-    dglc.qll(34, tIs, tpend)
-    dglc.qll(2, tIs, tpend, 3)  # 连接I差PL
-    dglc.sp('%sv6】全渠道I' % namess)
+    # dglc.cp()
+    # dglc.qll(34, tIs, tpend)
+    # dglc.qll(2, tIs, tpend, 3)  # 连接I差PL
+    # dglc.sp('%sv6】全渠道I' % namess)
 
     # dglc.cp()
-    #dglc.qll(34, tIs, tpend)
+    # dglc.qll(34, tIs, tpend)
     # dglc.qll(2, tIs, tpend, 3)  # 连接I差PL
-    #dglc.zdy('%s【辅】旗舰店I行为' % namess, 1)
-    #dglc.sp('%sv7】旗店之I' % namess)
+    # dglc.zdy('%s【辅】旗舰店I行为' % namess, 1)
+    # dglc.sp('%sv7】旗店之I' % namess)
 
     dglc.cp()
     dglc.zdy('%s【辅】旗舰店I行为' % namess)
@@ -173,9 +166,9 @@ def depths_of_aipl(tAs, tIs, t2bef):
 
     # dglc.cp()
     # dglc.zdy('%s【辅】超级用户'%namess)
-    #dglc.qll(34, tIs, tpend, 1)
+    # dglc.qll(34, tIs, tpend, 1)
     # dglc.qll(2, tIs, tpend, 3)  # 连接I差PL
-    #dglc.zdy('%s【辅】旗舰店I行为' % namess, 1)
+    # dglc.zdy('%s【辅】旗舰店I行为' % namess, 1)
     # dglc.sp('%sv9】超I-Total'%namess)
 
     dglc.cp()
@@ -196,9 +189,9 @@ def depths_of_aipl(tAs, tIs, t2bef):
 
     # dglc.cp()
     # dglc.zdy('%s【辅】超级用户'%namess)
-    #dglc.qll(34, tIs, tpend, 3)
+    # dglc.qll(34, tIs, tpend, 3)
     # dglc.qll(2, tIs, tpend, 3)  # 连接I差PL
-    #dglc.zdy('%s【辅】旗舰店I行为' % namess, 1)
+    # dglc.zdy('%s【辅】旗舰店I行为' % namess, 1)
     # dglc.sp('%sv12】非超I-Total'%namess)
 
     dglc.cp()
@@ -218,13 +211,13 @@ def depths_of_aipl(tAs, tIs, t2bef):
     dglc.sp('%sv14】非超I浅I' % namess)
 
     #-------【PL】---------------★★★★★★★★★★#
-    dglc.cp()
-    dglc.qll(34, t180, tpend)
-    dglc.sp('%sv15】全部PL' % namess)
+    # dglc.cp()
+    # dglc.qll(34, t180, tpend)
+    # dglc.sp('%sv15】全部PL' % namess)
 
     # dglc.cp()
-    #dglc.dp(5, t365, tpend)
-    #dglc.qll(34, t180, tpend, 1)
+    # dglc.dp(5, t365, tpend)
+    # dglc.qll(34, t180, tpend, 1)
     # dglc.sp('%sv16】旗舰店PL'%namess)
 
     dglc.cp()
@@ -240,8 +233,8 @@ def depths_of_aipl(tAs, tIs, t2bef):
     dglc.sp('%sv18】旗店PL非活' % namess)
 
     # dglc.cp()
-    #dglc.dp(5, t365, tpend)
-    #dglc.qll(34, t180, tpend, 3)
+    # dglc.dp(5, t365, tpend)
+    # dglc.qll(34, t180, tpend, 3)
     # dglc.sp('v19%s】非店PL'%namess)
 
     dglc.cp()

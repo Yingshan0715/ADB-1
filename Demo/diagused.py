@@ -30,7 +30,7 @@ def reloaddglc():
 def diaoyong_jindian(t2bef, t2end):
     reloaddglc()
     namess = namesstt(t2bef) + '-' + namesstt(t2end)
-    
+
     if two_check_time(t2bef, t2end):
         dglc.cp()
         dglc.dp(12345, t2bef, t2end, 2)
@@ -39,16 +39,14 @@ def diaoyong_jindian(t2bef, t2end):
         dglc.sp('%s【辅】进店ZDY' % namess)
 
 
-def diaoyong_tracking(t2bef, t2end, with_people, Xmodel=3):
+def diaoyong_tracking(t2bef, t2end, tpend, with_people, Xmodel=3):
     reloaddglc()
-    tpend = swtime(t2bef, False) - timedelta(1)
-    dy_name = namesstt(tpend)
+    
+    dy_name = namesstt(tpend) #tpend
     sc_name = namesstt(t2end)
 
     xname = 'xX' if Xmodel == 3 else '-'
     leixinname = ''
-
-    
 
     def cp3():
         nonlocal leixinname
@@ -75,6 +73,9 @@ def diaoyong_tracking(t2bef, t2end, with_people, Xmodel=3):
         elif with_people == 'ys':
             leixinname = '预售'
             dglc.dp(4, 1020, t2end)
+        elif with_people == 'ysgm':
+            leixinname = '预售购买'
+            dglc.dp(45, 1020, t2end)
         else:
             leixinname = with_people[0]
             dglc.zdy(with_people[1])

@@ -449,7 +449,7 @@ class BaseAuto():
             tt -= 1
             #aclick_after_clickdown(1, 1)
             clicks_after_clickdown(2, action)
-        elif fenlei in [2, 3, 6, 7]:  # 天猫国际 天猫国际直营 全球购 淘宝集市
+        elif fenlei in [3, 6, 7]:  # 天猫国际直营 全球购 淘宝集市
             aclick_after_clickdown(-1, fenlei)
             #aclick_after_clickdown(1, 1)
             #aclick_after_clickdown(2, 1)
@@ -459,7 +459,7 @@ class BaseAuto():
             #aclick_after_clickdown(1, 1)
             aclick_after_clickdown(2, 1)
             clicks_after_clickdown(3, action)
-        else:  # fenlei == 5
+        else:  # fenlei == 2 or 5
             aclick_after_clickdown(-1, fenlei)
             aclick_after_clickdown(1, self.zhanghao)
             aclick_after_clickdown(2, 1)
