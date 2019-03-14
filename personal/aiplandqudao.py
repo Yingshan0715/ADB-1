@@ -22,8 +22,8 @@ def set_dglc(izhang_hao, tmall_global, p_type, yybp, ppld, ppzq, mxdp, zszw, bra
                               p_type, yybp, ppld, ppzq, mxdp, zszw, brand_name)}, f)
 
 
-tAs = swtime('2018-12-10', False)
-tIs = swtime('2018-9-10', False)
+tAs = t180
+tIs = t180
 tPLs = t180
 
 

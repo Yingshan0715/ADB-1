@@ -25,4 +25,4 @@ def logdf():
         _df.columns = ['品牌名称', '生成时间', '人群包名称', '逻辑单元数']
         _df['生成时间'] = pd.to_datetime(_df['生成时间'])
         df = pd.concat([df, _df])
-    return df.drop_duplicates()
+    return df

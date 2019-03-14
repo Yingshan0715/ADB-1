@@ -268,7 +268,7 @@ def _depths_of_aipl(tAs, tIs, t2bef, t2end,
     #dglc.qll(34, t180, tpend, 1)
     #dglc.sp('%sv16】旗舰店PL'%namess + name)
 
-    t365 = '2018-3-10'
+    
 
     cp2()
     dglc.zdy('%s【辅】活跃ZDY' % namess, Xmodel)

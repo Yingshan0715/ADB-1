@@ -72,10 +72,10 @@ def diaoyong_tracking(t2bef, t2end, tpend, with_people, Xmodel=3):
             dglc.dp(23, t2bef, t2end)
         elif with_people == 'ys':
             leixinname = '预售'
-            dglc.dp(4, 1020, t2end)
+            dglc.dp(4, t2bef, t2end)
         elif with_people == 'ysgm':
             leixinname = '预售购买'
-            dglc.dp(45, 1020, t2end)
+            dglc.dp(45, t2bef, t2end)
         else:
             leixinname = with_people[0]
             dglc.zdy(with_people[1])
