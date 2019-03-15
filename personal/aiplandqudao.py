@@ -204,6 +204,7 @@ def qudaofenbu_aipl(ts, te, aipl_name, nametyple, namess):
     dglc.cp()
     dglc.mrhd(1, ts, te, 3)
     dglc.mrhd(2, ts, te, 3)
+    dglc.mrhd(3, ts, te, 3)
     dglc.zdy('%s%s' % (namess, aipl_name), 3)
     dglc.sp('%s%s-xX-每日好店' % (namess, aipl_name2))
 
@@ -260,7 +261,7 @@ def qudaofenbu_aipl(ts, te, aipl_name, nametyple, namess):
     dglc.sp('%s%s-xX-线下U先' % (namess, aipl_name2))
 
     dglc.cp()
-    dglc.zhsq(2, ts, te, 3)
+    #dglc.zhsq(2, ts, te, 3)
     dglc.zhsq(1, ts, te, 3)
     dglc.zdy('%s%s' % (namess, aipl_name), 3)
     dglc.sp('%s%s-xX-智慧商圈' % (namess, aipl_name2))
@@ -456,6 +457,7 @@ def qudaofenbu_huizong(ts, te, namess):
     dglc.cp()
     dglc.mrhd(1, ts, te, 2)
     dglc.mrhd(2, ts, te, 2)
+    dglc.mrhd(3, ts, te, 2)
     dglc.sp('%s-汇总-每日好店' % (namess))
 
     dglc.cp()
@@ -502,7 +504,7 @@ def qudaofenbu_huizong(ts, te, namess):
     dglc.sp('%s-汇总-线下U先' % (namess))
 
     dglc.cp()
-    dglc.zhsq(2, ts, te, 2)
+    #dglc.zhsq(2, ts, te, 2)
     dglc.zhsq(1, ts, te, 2)
     dglc.sp('%s-汇总-智慧商圈' % (namess))
 

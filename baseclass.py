@@ -291,7 +291,8 @@ class BaseAuto():
         elif fenlei == 10:
             aclick_after_clickdown(-1, 8, Downstyle=True)
             aclick_after_clickdown(1, action)
-            aclick_after_clickdown(2, self.zhanghao)
+            if action != 3:
+                aclick_after_clickdown(2, self.zhanghao)
         #-----------------------------------------------------------------------------------#
         Downstyle = False if self.smallscreen else True
         datetime_ptptt(tt, start_date, end_date, Downstyle)
@@ -420,7 +421,7 @@ class BaseAuto():
             click2((650, 380))
         tt = 4 if fenlei == 2 else 3
         #-----------------------------------------------------------------------------------#
-        Downstyle = False if self.smallscreen else True
+        Downstyle = False if self.smallscreen and tt > 3 else True
         datetime_ptptt(tt, start_date, end_date, Downstyle)
         #★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★#
 

@@ -9,3 +9,10 @@ from .diagnoseU import depths_of_aipl
 
 
 from .diagused import diaoyong_tracking, diaoyong_jindian
+
+
+'''
+依赖
+pip install PyGetWindow==0.0.1
+pip install pyautogui
+'''
