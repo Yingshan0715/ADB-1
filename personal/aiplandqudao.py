@@ -261,7 +261,6 @@ def qudaofenbu_aipl(ts, te, aipl_name, nametyple, namess):
     dglc.sp('%s%s-xX-线下U先' % (namess, aipl_name2))
 
     dglc.cp()
-    #dglc.zhsq(2, ts, te, 3)
     dglc.zhsq(1, ts, te, 3)
     dglc.zdy('%s%s' % (namess, aipl_name), 3)
     dglc.sp('%s%s-xX-智慧商圈' % (namess, aipl_name2))
@@ -303,8 +302,8 @@ def qudaofenbu_aipl(ts, te, aipl_name, nametyple, namess):
         dglc.dpall(45, ts, te, 3)
     else:
         dglc.dpall(123, ts, te, 3)
-    dglc.zdy('%s%s' % (namess, aipl_name), 3)
-    dglc.sp('%s%s-xX-天猫全部' % (namess, aipl_name2))
+    dglc.zdy('%s%s' % (namess, aipl_name), 1)
+    dglc.sp('%s%s-交集-天猫全部' % (namess, aipl_name2))
 
     dglc.cp()
     dglc.zdy('%s%s' % (namess, aipl_name), 3)
@@ -496,6 +495,7 @@ def qudaofenbu_huizong(ts, te, namess):
 
     dglc.cp()
     dglc.cnyz(3, ts, te, 2)
+    dglc.cnyz(2, ts, te, 2)
     dglc.cnyz(1, ts, te, 2)
     dglc.sp('%s-汇总-菜鸟驿站' % (namess))
 
@@ -504,14 +504,13 @@ def qudaofenbu_huizong(ts, te, namess):
     dglc.sp('%s-汇总-线下U先' % (namess))
 
     dglc.cp()
-    #dglc.zhsq(2, ts, te, 2)
     dglc.zhsq(1, ts, te, 2)
     dglc.sp('%s-汇总-智慧商圈' % (namess))
 
     dglc.cp()
     dglc.dptmgj(45, ts, te, 2)
     dglc.sp('%s-汇总45-天猫国际' % (namess))
-    
+
     dglc.cp()
     dglc.dptmgj(123, ts, te, 2)
     dglc.sp('%s-汇总123-天猫国际' % (namess))
@@ -519,7 +518,7 @@ def qudaofenbu_huizong(ts, te, namess):
     dglc.cp()
     dglc.dptmgjzy(45, ts, te, 2)
     dglc.sp('%s-汇总45-国际直营' % (namess))
-    
+
     dglc.cp()
     dglc.dptmgjzy(123, ts, te, 2)
     dglc.sp('%s-汇总123-国际直营' % (namess))
@@ -535,7 +534,7 @@ def qudaofenbu_huizong(ts, te, namess):
     dglc.cp()
     dglc.dp(45, ts, te, 2)
     dglc.sp('%s-汇总45-天猫旗舰店' % (namess))
-    
+
     dglc.cp()
     dglc.dp(123, ts, te, 2)
     dglc.sp('%s-汇总123-天猫旗舰店' % (namess))
@@ -543,7 +542,7 @@ def qudaofenbu_huizong(ts, te, namess):
     dglc.cp()
     dglc.dpall(45, ts, te, 2)
     dglc.sp('%s-汇总45-天猫全部' % (namess))
-    
+
     dglc.cp()
     dglc.dpall(123, ts, te, 2)
     dglc.sp('%s-汇总123-天猫全部' % (namess))
@@ -552,7 +551,7 @@ def qudaofenbu_huizong(ts, te, namess):
     dglc.dp(45, ts, te, 1)
     dglc.dpall(45, ts, te, 3)
     dglc.sp('%s-汇总45-天猫其他' % (namess))
-    
+
     dglc.cp()
     dglc.dp(123, ts, te, 1)
     dglc.dpall(123, ts, te, 3)
@@ -561,7 +560,7 @@ def qudaofenbu_huizong(ts, te, namess):
     dglc.cp()
     dglc.dpqqg(45, ts, te, 2)
     dglc.sp('%s-汇总45-全球购' % (namess))
-    
+
     dglc.cp()
     dglc.dpqqg(123, ts, te, 2)
     dglc.sp('%s-汇总123-全球购' % (namess))
@@ -569,7 +568,7 @@ def qudaofenbu_huizong(ts, te, namess):
     dglc.cp()
     dglc.dptbjs(45, ts, te, 2)
     dglc.sp('%s-汇总45-淘宝集市' % (namess))
-    
+
     dglc.cp()
     dglc.dptbjs(123, ts, te, 2)
     dglc.sp('%s-汇总123-淘宝集市' % (namess))

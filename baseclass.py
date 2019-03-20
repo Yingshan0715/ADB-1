@@ -11,21 +11,9 @@ from .combaction import aclick_after_clickdown, clicks_after_clickdown
 from .combaction import datetime_ptptt, input_in_twoblocks
 from .adblog import adbloginfo
 
-ROF = False
-
-
-def set_ROF(Roll_of_fufei):
-    global ROF
-    ROF = Roll_of_fufei
-
 
 class BaseAuto():
-    '''
-    tmall_global=False, purchase_Behaviour='dp'
-    tmall_global=True, purchase_Behaviour='gj'
-    tmall_global=True, purchase_Behaviour='dp'
-    '''
-    __slots__ = ('zhanghao', '_tmall_global', '_purchase_Behaviour', 'Roll_of_fufei',
+    __slots__ = ('zhanghao', '_tmall_global', '_purchase_Behaviour',
                  'drgcount', 'smallscreen',
                  'yybp_order', 'ppld_order',
                  'ppzq_order', 'mxdp_order', 'zszw_order')
@@ -45,7 +33,6 @@ class BaseAuto():
         init.ppzq_order = zhanghao
         init.mxdp_order = zhanghao
         init.zszw_order = zhanghao
-        init.Roll_of_fufei = ROF
 
         if (not init.tmall_global) and (purchase_Behaviour == 'gj'):
             raise Error('No gjp in no-tmall_global')
@@ -222,14 +209,8 @@ class BaseAuto():
         self._drag_to_workspace_and_jbc(wz, nm, nn, jbc)
         aclick_after_clickdown(-1, fenlei)
         #-----------------------------------------------------------------------------------#
-        if 3 <= fenlei <= 4:  # yybp # ppld
+        if 3 <= fenlei <= 7:  # yybp # ppld # ppzq # mxdp # zszw
             aclick_after_clickdown(1, position_of_Real)  # 账号
-            aclick_after_clickdown(2, action)
-            input_in_twoblocks(3, qujian)
-            tt = 5
-        elif 5 <= fenlei <= 7:  # ppzq # mxdp # zszw
-            aclick_after_clickdown(1, position_of_Real,
-                                   self.Roll_of_fufei)  # 账号
             aclick_after_clickdown(2, action)
             input_in_twoblocks(3, qujian)
             tt = 5
@@ -406,7 +387,7 @@ class BaseAuto():
         #★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★#
 
     def _xianxiachudian(self, fenlei, action, start_date, end_date, jbc):
-        '''销售渠道总方法'''
+        '''线下触点总方法'''
         #☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆#
         wz, nn, nm,  tt = 8, 1, 2, 3
         assert two_check_time(start_date, end_date)
@@ -450,15 +431,10 @@ class BaseAuto():
             tt -= 1
             #aclick_after_clickdown(1, 1)
             clicks_after_clickdown(2, action)
-        elif fenlei in [3, 6, 7]:  # 天猫国际直营 全球购 淘宝集市
+        elif fenlei in [3, 4, 6, 7]:  # 天猫国际直营 # 天猫超市 全球购 淘宝集市
             aclick_after_clickdown(-1, fenlei)
             #aclick_after_clickdown(1, 1)
             #aclick_after_clickdown(2, 1)
-            clicks_after_clickdown(3, action)
-        elif fenlei == 4:
-            aclick_after_clickdown(-1, fenlei)
-            #aclick_after_clickdown(1, 1)
-            aclick_after_clickdown(2, 1)
             clicks_after_clickdown(3, action)
         else:  # fenlei == 2 or 5
             aclick_after_clickdown(-1, fenlei)
