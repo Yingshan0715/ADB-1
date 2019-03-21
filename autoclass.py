@@ -19,8 +19,13 @@ class AutoDatabank(BaseAuto):
             self.mxdp_order, self.zszw_order))
 
     def qll(self, aipl, start_date, end_date, jbc='j'):
-        '''全链路状态'''
-        self._quanlianluzhuangtai(aipl, start_date, end_date, jbc)
+        '''全链路状态--不带二级类目'''
+        self._quanlianluzhuangtai(aipl, None, start_date, end_date, jbc)
+
+    def qll_erjileimu(self, aipl, erjileimu, start_date, end_date, jbc='j'):
+        '''全链路状态--带二级类目'''
+        assert isinstance(erjileimu, str)
+        self._quanlianluzhuangtai(aipl, erjileimu, start_date, end_date, jbc)
     #############################☆######################################
 
     def ud(self, qujian, start_date, end_date, jbc='j', action=1):

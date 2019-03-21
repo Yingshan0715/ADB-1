@@ -1,3 +1,10 @@
+'''
+依赖
+pip install PyGetWindow==0.0.1
+pip install pyautogui
+'''
+
+
 from .actionfunc import set_pause
 # Class Behavior function
 from .actionfunc import click2, ppaste

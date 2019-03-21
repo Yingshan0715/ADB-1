@@ -2,7 +2,6 @@ import time
 import pyautogui
 import pyperclip
 from datetime import datetime
-from threading import Thread
 
 from .positiondf import positiondict, contents, mglogic, pp, dragxy
 from .actionfunc import click2, dragg, ppaste
@@ -94,9 +93,6 @@ class BaseAuto():
 
         timenow = datetime.now().strftime('%Y-%m-%d')
         adbloginfo(self.brand_name, timenow, people_name, self.drgcount)
-
-        time.sleep(1)
-
     sp = _savepeople
 
     def _drag_to_workspace_and_jbc(self, wz, nm, nn, jbc):
@@ -125,7 +121,7 @@ class BaseAuto():
             pyautogui.click(positiondict['confirm_de'], pause=0.7)
             pyautogui.click(positiondict['confirm_dede'], pause=0.6)
 
-    def _quanlianluzhuangtai(self, aipl, start_date, end_date, jbc):
+    def _quanlianluzhuangtai(self, aipl, erjileimu, start_date, end_date, jbc):
         '''全链路状态---全链路状态'''
         #☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆#
         wz, nm, nn, tt = 1, 2, 2, 4
@@ -133,6 +129,14 @@ class BaseAuto():
         self._drag_to_workspace_and_jbc(wz, nm, nn, jbc)
         #-----------------------------------------------------------------------------------#
         clicks_after_clickdown(1, aipl)
+        if erjileimu:
+            click2(pp(2))
+            click2(dragxy(pp(2),1))
+            click2(dragxy(pp(2),1))            
+            ppaste(erjileimu)
+            click2(pp(4))
+        else:
+            pass
         #-----------------------------------------------------------------------------------#
         Downstyle = False if self.smallscreen else True
         datetime_ptptt(tt, start_date, end_date, Downstyle)
@@ -146,7 +150,6 @@ class BaseAuto():
         #-----------------------------------------------------------------------------------#
         aclick_after_clickdown(1, kk)
         clicks_after_clickdown(2, jj)
-        #-----------------------------------------------------------------------------------#
         #★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★#
 
     def xfxw(self, kk, jj, jbc):
@@ -157,7 +160,6 @@ class BaseAuto():
         #-----------------------------------------------------------------------------------#
         aclick_after_clickdown(1, kk)
         clicks_after_clickdown(2, jj)
-        #-----------------------------------------------------------------------------------#
         #★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★#
 
     def pjpc(self, jj, jbc):
@@ -171,7 +173,6 @@ class BaseAuto():
         aclick_after_clickdown(1, 4, Downstyle=True)
         clicks_after_clickdown(2, jj)
         #-----------------------------------------------------------------------------------#
-
         #★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★#
 
     def ss(self, words, start_date, end_date, jbc='j'):

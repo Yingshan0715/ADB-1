@@ -18,7 +18,6 @@ def clicks_after_clickdown(father, sons):
     if isinstance(sons, int):
         click2(pp(father))
         for i in str(sons):
-            #assert 1 <= int(i) <= 5
             click2(dragxy(pp(father), int(i)))
         click2(positiondict['blankk'])
     else:
