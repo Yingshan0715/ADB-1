@@ -434,8 +434,8 @@ class BaseAuto():
             clicks_after_clickdown(2, action)
         elif fenlei in [3, 4, 6, 7]:  # 天猫国际直营 # 天猫超市 全球购 淘宝集市
             aclick_after_clickdown(-1, fenlei)
-            #aclick_after_clickdown(1, 1)
-            #aclick_after_clickdown(2, 1)
+            aclick_after_clickdown(1, 1)
+            aclick_after_clickdown(2, 1)
             clicks_after_clickdown(3, action)
         else:  # fenlei == 2 or 5
             aclick_after_clickdown(-1, fenlei)

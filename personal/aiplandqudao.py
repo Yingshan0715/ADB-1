@@ -251,6 +251,7 @@ def qudaofenbu_aipl(ts, te, aipl_name, nametyple, namess):
 
     dglc.cp()
     dglc.cnyz(3, ts, te, 3)
+    dglc.cnyz(2, ts, te, 3)
     dglc.cnyz(1, ts, te, 3)
     dglc.zdy('%s%s' % (namess, aipl_name), 3)
     dglc.sp('%s%s-xX-菜鸟驿站' % (namess, aipl_name2))
