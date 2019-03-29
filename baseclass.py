@@ -131,8 +131,8 @@ class BaseAuto():
         clicks_after_clickdown(1, aipl)
         if erjileimu:
             click2(pp(2))
-            click2(dragxy(pp(2),1))
-            click2(dragxy(pp(2),1))            
+            click2(dragxy(pp(2), 1))
+            click2(dragxy(pp(2), 1))
             ppaste(erjileimu)
             click2(pp(4))
         else:
@@ -537,4 +537,24 @@ class BaseAuto():
         #-----------------------------------------------------------------------------------#
         Downstyle = False if self.smallscreen else True
         datetime_ptptt(tt, start_date, end_date, Downstyle)
+        #★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★#
+
+    def flpdp(self, action, skuid, start_date, end_date, jbc):
+        '''飞利浦购买---带商品ID'''
+        #☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆#
+        #-----------------------------------------------------------------------------------#
+        wz, nm, nn = 8, 2, 3
+        self._drag_to_workspace_and_jbc(wz, nm, nn, jbc)
+
+        aclick_after_clickdown(-1, 5)
+        Downstyle = False if self.smallscreen else True
+        datetime_ptptt(6, start_date, end_date, Downstyle)
+
+        aclick_after_clickdown(1, self.zhanghao)
+        clicks_after_clickdown(3, action)
+
+        aclick_after_clickdown(2, 2)
+        click2((pp(2)[0] + 150, pp(2)[1]))
+        ppaste(skuid)
+        #-----------------------------------------------------------------------------------#
         #★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★#
