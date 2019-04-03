@@ -145,17 +145,7 @@ class BaseAuto():
     def jcsx(self, kk, jj, jbc):
         '''属性圈人---基础属性'''
         #☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆#
-        wz, nm, nn, tt = 10, 2, 0, 0
-        self._drag_to_workspace_and_jbc(wz, nm, nn, jbc)
-        #-----------------------------------------------------------------------------------#
-        aclick_after_clickdown(1, kk)
-        clicks_after_clickdown(2, jj)
-        #★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★#
-
-    def xfxw(self, kk, jj, jbc):
-        '''属性圈人---基础属性'''
-        #☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆#
-        wz, nm, nn, tt = 12, 2, 0, 0
+        wz, nm, nn, tt = 11, 2, 0, 0
         self._drag_to_workspace_and_jbc(wz, nm, nn, jbc)
         #-----------------------------------------------------------------------------------#
         aclick_after_clickdown(1, kk)
@@ -178,7 +168,7 @@ class BaseAuto():
     def ss(self, words, start_date, end_date, jbc='j'):
         '''搜索'''
         #☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆#
-        wz, nm, nn, tt = 3, 1, 2, 3
+        wz, nm, nn, tt = 4, 1, 2, 3
         assert two_check_time(start_date, end_date)
         self._drag_to_workspace_and_jbc(wz, nm, nn, jbc)
         Downstyle = True  # Always True
@@ -204,7 +194,7 @@ class BaseAuto():
                        action, position_of_Real):
         '''付费广告总方法'''
         #☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆#
-        wz, nm, nn, tt = 4, 2, 2, 4
+        wz, nm, nn, tt = 5, 2, 2, 4
         assert two_check_time(start_date, end_date, False)
         assert isinstance(qujian, list) and len(qujian) == 2
         self._drag_to_workspace_and_jbc(wz, nm, nn, jbc)
@@ -226,7 +216,7 @@ class BaseAuto():
     def _pinpaihao(self, actiontype, action, start_date, end_date, jbc):
         '''品牌号总方法---单独的内容方法'''
         #☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆#
-        wz, nm, nn, tt = 5, 1, 0, 4
+        wz, nm, nn, tt = 6, 1, 0, 4
         assert two_check_time(start_date, end_date)
         self._drag_to_workspace_and_jbc(wz, nm, nn, jbc)
         #-----------------------------------------------------------------------------------#
@@ -243,7 +233,7 @@ class BaseAuto():
     def _neirongyunying(self, fenlei, action, start_date, end_date, jbc):
         '''内容运营总方法'''
         #☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆#
-        wz, nm, nn, tt = 5, 1, 0, 4
+        wz, nm, nn, tt = 6, 1, 0, 4
         assert two_check_time(start_date, end_date)
         self._drag_to_workspace_and_jbc(wz, nm, nn, jbc)
         #-----------------------------------------------------------------------------------#
@@ -283,7 +273,7 @@ class BaseAuto():
     def tbtt_v(self, action, start_date, end_date, jbc):
         '''内容运营---淘宝头条---V任务'''
         #☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆#
-        wz, nm, nn, tt = 5, 1, 0, 5
+        wz, nm, nn, tt = 6, 1, 0, 5
         assert two_check_time(start_date, end_date)
         self._drag_to_workspace_and_jbc(wz, nm, nn, jbc)
         #-----------------------------------------------------------------------------------#
@@ -300,7 +290,7 @@ class BaseAuto():
     def wt_v(self, action, start_date, end_date, jbc):
         '''内容运营---微淘---V任务'''
         #☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆#
-        wz, nm, nn, tt = 5, 1, 0, 6
+        wz, nm, nn, tt = 6, 1, 0, 6
         assert two_check_time(start_date, end_date)
         self._drag_to_workspace_and_jbc(wz, nm, nn, jbc)
         #-----------------------------------------------------------------------------------#
@@ -318,7 +308,7 @@ class BaseAuto():
     def wt_gg(self, action, start_date, end_date, jbc):
         '''内容运营---微淘---关注'''
         #☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆#
-        wz, nm, nn, tt = 5, 1, 0, 4
+        wz, nm, nn, tt = 6, 1, 0, 4
         assert two_check_time(start_date, end_date)
         self._drag_to_workspace_and_jbc(wz, nm, nn, jbc)
         #-----------------------------------------------------------------------------------#
@@ -334,11 +324,11 @@ class BaseAuto():
     def _yingxiaopingtai(self, fenlei, actiontype, action, start_date, end_date, jbc):
         '''天猫营销平台总方法'''
         #☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆#
-        wz, nm, nn, tt = 6, 1, 2, 4
+        wz, nm, nn, tt = 7, 1, 2, 4
         assert two_check_time(start_date, end_date)
-        click2(contents(6))
+        click2(contents(7))
         self._drag_to_workspace_and_jbc(wz, nm, nn, jbc)
-        click2(contents(10))
+        click2(contents(11))
         #-----------------------------------------------------------------------------------#
         aclick_after_clickdown(-1, fenlei)
         if fenlei in [1, 8]:
@@ -367,13 +357,13 @@ class BaseAuto():
     def _xiaoshouqudao(self, fenlei, action, start_date, end_date, jbc):
         '''销售渠道总方法'''
         #☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆#
-        wz,  tt = 7,  4
+        wz,  tt = 8,  4
         nm = 2 if self._tmall_global else 1
         nn = 2 if self._tmall_global else 0
         assert two_check_time(start_date, end_date)
-        click2(contents(6))
+        click2(contents(7))
         self._drag_to_workspace_and_jbc(wz, nm, nn, jbc)
-        click2(contents(10))
+        click2(contents(11))
         aclick_after_clickdown(-1, fenlei)
         #-----------------------------------------------------------------------------------#
         if fenlei in [1, 4]:
@@ -390,11 +380,11 @@ class BaseAuto():
     def _xianxiachudian(self, fenlei, action, start_date, end_date, jbc):
         '''线下触点总方法'''
         #☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆#
-        wz, nn, nm,  tt = 8, 1, 2, 3
+        wz, nn, nm,  tt = 9, 1, 2, 3
         assert two_check_time(start_date, end_date)
-        click2(contents(6))
+        click2(contents(7))
         self._drag_to_workspace_and_jbc(wz, nm, nn, jbc)
-        click2(contents(10))
+        click2(contents(11))
         aclick_after_clickdown(-1, fenlei)
         #-----------------------------------------------------------------------------------#
         aclick_after_clickdown(1, action)
@@ -426,7 +416,7 @@ class BaseAuto():
         else:
             assert two_check_time(start_date, end_date)
         #-----------------------------------------------------------------------------------#
-        wz, nm, nn = 8, 2, 3
+        wz, nm, nn = 9, 2, 3
         self._drag_to_workspace_and_jbc(wz, nm, nn, jbc)
         if fenlei == 1:
             tt -= 1
@@ -450,7 +440,7 @@ class BaseAuto():
     def hy(self, action, start_date, end_date, jbc='j'):
         '''会员方法'''
         #☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆#
-        wz, nm, nn, tt = 15, 1, 0, 3
+        wz, nm, nn, tt = 16, 1, 0, 3
         assert two_check_time(start_date, end_date)
         if self.smallscreen:
             click2(contents(1))
@@ -471,7 +461,7 @@ class BaseAuto():
     def zdy(self, peo1, jbc='j', usess=1):
         '''项目自定义人方法'''
         #☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆#
-        wz, nm, nn = 17, 1, 0
+        wz, nm, nn = 18, 1, 0
         if self.smallscreen:
             click2(contents(1))
             pyautogui.scroll(clicks=-2500)
@@ -496,7 +486,7 @@ class BaseAuto():
         action = 1
         tt = 7
         #-----------------------------------------------------------------------------------#
-        wz, nm, nn = 8, 2, 3
+        wz, nm, nn = 9, 2, 3
         self._drag_to_workspace_and_jbc(wz, nm, nn, jbc)
         if fenlei == 1:
             tt -= 1
@@ -521,7 +511,7 @@ class BaseAuto():
         action = 5
         tt = 8
         #-----------------------------------------------------------------------------------#
-        wz, nm, nn = 8, 2, 3
+        wz, nm, nn = 9, 2, 3
         self._drag_to_workspace_and_jbc(wz, nm, nn, jbc)
         if fenlei == 1:
             tt -= 1
@@ -543,7 +533,7 @@ class BaseAuto():
         '''飞利浦购买---带商品ID'''
         #☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆#
         #-----------------------------------------------------------------------------------#
-        wz, nm, nn = 8, 2, 3
+        wz, nm, nn = 9, 2, 3
         self._drag_to_workspace_and_jbc(wz, nm, nn, jbc)
 
         aclick_after_clickdown(-1, 5)

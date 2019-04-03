@@ -79,7 +79,7 @@ def fuzhu_of_depth(tAs, tIs, tHs, tpend, kwords, pph=True):
     dglc.sp('%s【辅】旗舰店I行为' % namess)
 
     dglc.cp()
-    dglc.tm(3, i1, i2, 2)
+    dglc.wt_gg(2, i2, i2, 2)
     dglc.hy(2, i2, i2, 2)
     if pph:
         dglc.pph(2, 2, i2, i2, 2)
@@ -92,10 +92,8 @@ def fuzhu_of_depth(tAs, tIs, tHs, tpend, kwords, pph=True):
     dglc.pph(1, 1, h1, h2, 2)
     dglc.pph(2, 1, h1, h2, 2)
 
-    dglc.tbtt(2, h1, h2, 2)
-    dglc.tbtt(3, h1, h2, 2)
-    dglc.tbtt(4, h1, h2, 2)
-    dglc.tbtt(5, h1, h2, 2)
+    dglc.tbtt(1, h1, h2, 2)
+    
     dglc.yhh(2, h1, h2, 2)
     dglc.yhh(3, h1, h2, 2)
     dglc.bmqd(2, h1, h2, 2)
@@ -170,6 +168,23 @@ def depths_of_aipl(tAs, tIs, tpend):
     # dglc.qll(2, tIs, tpend, 3)  # 连接I差PL
     # dglc.zdy('%s【辅】旗舰店I行为' % namess, 1)
     # dglc.sp('%sv9】超I-Total'%namess)
+    
+    dglc.cp()
+    dglc.hy(2, tpend, tpend, 2)
+    dglc.wt_gg(2, tpend, tpend, 3)
+
+    dglc.qll(34, tIs, tpend, 1)
+    dglc.qll(2, tIs, tpend, 3)  # 连接I差PL
+    dglc.zdy('%s【辅】旗舰店I行为' % namess, 1)
+    dglc.sp('%sv9】粉丝I人群' % namess)
+
+    dglc.cp()
+    dglc.hy(2, tpend, tpend, 2)
+
+    dglc.qll(34, tIs, tpend, 1)
+    dglc.qll(2, tIs, tpend, 3)  # 连接I差PL
+    dglc.zdy('%s【辅】旗舰店I行为' % namess, 1)
+    dglc.sp('%sv9】会员I人群' % namess)
 
     dglc.cp()
     dglc.dp(23, tIs, tpend)

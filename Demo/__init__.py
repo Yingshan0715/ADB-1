@@ -1,3 +1,6 @@
+from .test import quickrun, run_Total
+
+
 from .diagnoseU import set_dglc  # dglc 控制↓↓↓↓行为
 
 from .diagnoseU import new_and_old, zszw_new_and_old_convert

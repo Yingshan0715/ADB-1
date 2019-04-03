@@ -100,6 +100,16 @@ def diaoyong_tracking(t2bef, t2end, tpend, with_people, Xmodel=3):
             (dy_name, sc_name, xname, leixinname))
 
     cp3()
+    dglc.zdy('%sv9】粉丝I人群' % dy_name, Xmodel)
+    dglc.sp('%s-%s粉丝I%s%s' %
+            (dy_name, sc_name, xname, leixinname))
+
+    cp3()
+    dglc.zdy('%sv10】会员I人群' % dy_name, Xmodel)
+    dglc.sp('%s-%s会员I%s%s' %
+            (dy_name, sc_name, xname, leixinname))
+
+    cp3()
     dglc.zdy('%sv11】超I浅I' % dy_name, Xmodel)
     dglc.zdy('%sv10】超I深I' % dy_name, 2)
     dglc.sp('%s-%s超级I%s%s' %
