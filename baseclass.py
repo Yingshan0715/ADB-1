@@ -184,7 +184,7 @@ class BaseAuto():
         '''超级搜索'''
         #☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆#
         swords = words.split(',')
-        for i in range(len(swords) // 20 + 1):
+        for i in range((len(swords)-1) // 20 + 1):
             _jbc = jbc[0] if i == 0 else jbc[1]
             pas_words = ','.join(swords[i * 20:i * 20 + 20])
             self.ss(pas_words, start_date, end_date, _jbc)
