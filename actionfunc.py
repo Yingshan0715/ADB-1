@@ -92,6 +92,6 @@ def checktime(inputtime, defultChecking=True):
 
 def two_check_time(ts, te, defultChecking=True):
     if defultChecking:
-        return checktime(ts) and checktime(te) and (swtime(ts, False) <= swtime(ts, False))
+        return checktime(ts) and checktime(te) and (swtime(ts, False) <= swtime(te, False))
     else:
-        return checktime(ts, False) and checktime(te, False) and (swtime(ts, False) <= swtime(ts, False))
+        return checktime(ts, False) and checktime(te, False) and (swtime(ts, False) <= swtime(te, False))
