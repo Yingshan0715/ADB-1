@@ -529,7 +529,7 @@ class BaseAuto():
         datetime_ptptt(tt, start_date, end_date, Downstyle)
         #★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★#
 
-    def flpdp(self, action, skuid, start_date, end_date, jbc):
+    def flpdp(self, action, skuid, start_date, end_date, jbc=1, erjileimu='全部'):
         '''飞利浦购买---带商品ID'''
         #☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆#
         #-----------------------------------------------------------------------------------#
@@ -539,6 +539,12 @@ class BaseAuto():
         aclick_after_clickdown(-1, 5)
         Downstyle = False if self.smallscreen else True
         datetime_ptptt(6, start_date, end_date, Downstyle)
+        
+        click2(pp(4))
+        click2(dragxy(pp(4), 1))
+        click2(dragxy(pp(4), 1))
+        ppaste(erjileimu)
+        click2(pp(6))
 
         aclick_after_clickdown(1, self.zhanghao)
         clicks_after_clickdown(3, action)
