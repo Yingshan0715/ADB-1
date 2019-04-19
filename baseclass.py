@@ -184,7 +184,7 @@ class BaseAuto():
         '''超级搜索'''
         #☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆#
         swords = words.split(',')
-        for i in range((len(swords)-1) // 20 + 1):
+        for i in range((len(swords) - 1) // 20 + 1):
             _jbc = jbc[0] if i == 0 else jbc[1]
             pas_words = ','.join(swords[i * 20:i * 20 + 20])
             self.ss(pas_words, start_date, end_date, _jbc)
@@ -536,21 +536,34 @@ class BaseAuto():
         wz, nm, nn = 9, 2, 3
         self._drag_to_workspace_and_jbc(wz, nm, nn, jbc)
 
+        saction = str(action)
+        if len(saction) >= 2:
+            tt = 6
+        elif saction == '1':
+            tt = 7
+        elif saction in '234':
+            tt = 6
+        elif saction == '5':
+            tt = 8
+
         aclick_after_clickdown(-1, 5)
-        Downstyle = False if self.smallscreen else True
-        datetime_ptptt(6, start_date, end_date, Downstyle)
-        
+        aclick_after_clickdown(1, self.zhanghao)
+
         click2(pp(4))
         click2(dragxy(pp(4), 1))
         click2(dragxy(pp(4), 1))
         ppaste(erjileimu)
         click2(pp(6))
 
-        aclick_after_clickdown(1, self.zhanghao)
         clicks_after_clickdown(3, action)
+        Downstyle = False if self.smallscreen else True
+        datetime_ptptt(tt, start_date, end_date, Downstyle)
 
-        aclick_after_clickdown(2, 2)
-        click2((pp(2)[0] + 150, pp(2)[1]))
-        ppaste(skuid)
+        if skuid:
+            aclick_after_clickdown(2, 2)
+            click2((pp(2)[0] + 150, pp(2)[1]))
+            ppaste(skuid)
+        else:
+            aclick_after_clickdown(2, 1)
         #-----------------------------------------------------------------------------------#
         #★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★#
