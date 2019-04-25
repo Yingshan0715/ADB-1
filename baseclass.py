@@ -80,8 +80,9 @@ class BaseAuto():
                 pyautogui.hotkey('ctrl', 'c')
             else:
                 pyautogui.hotkey('ctrl', 'shift', 'i')
+                pyautogui.press('esc')
                 pyautogui.moveTo(
-                    positiondict['countnumber'], duration=0.25, pause=0.25)
+                    positiondict['countnumber'], duration=0.20, pause=0.11)
                 pyautogui.doubleClick()
                 pyautogui.hotkey('ctrl', 'c')
                 pyautogui.hotkey('ctrl', 'shift', 'i')
